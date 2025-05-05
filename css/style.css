@@ -1,0 +1,148 @@
+:root{
+
+    --branco: #ffffff;
+    --preto: #000000;
+    --verde: #9BAE45;
+    --verde-escuro: #7D8F30;
+    --bege: #8F7868;
+    --bege-escuro: #745B49;
+    --marrom: #433633;
+    --cinza: #2c2c2c;
+}
+
+html, body{
+
+    position: relative;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 45em;
+}
+
+body{
+
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+swiper-container{
+
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide{
+
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img{
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CABEÇALHO */
+
+header{
+
+    background-color: var(--preto);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#logo{
+
+    width: 180px;
+}
+
+/* BANNER */
+
+#banner img{
+
+    width: 100%;
+    height: 85vh;
+}
+
+/* PRINCIPAL */
+
+#principal{
+
+    padding: 2.5em 2em;
+}
+
+#principal h1 {
+
+    text-align: center;
+    font-size: 3em;
+    font-family: "Mogra", system-ui;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+#cards{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    gap: 50px 100px;
+}
+
+.card{
+
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--preto);
+    padding: 1em 2em;
+    border-radius: 5px;
+    background-color: var(--branco);
+}
+
+.card h2{
+
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: .4em 0 .5em 0;
+    text-align: center;
+}
+
+.card p{
+
+    color: var(--cinza);
+    margin-bottom: .5em;
+}
+
+.card button{
+
+    padding: .5em 1em;
+    background-color: var(--bege-escuro);
+    border: 1px solid var(--preto);
+    cursor: pointer;
+}
+
+.card button:hover{
+
+    background-color: var(--marrom);
+}
+
+.card a{
+
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--branco);
+}
