@@ -2,10 +2,10 @@
 
     --branco: #ffffff;
     --preto: #000000;
-    --verde: #9BAE45;
-    --verde-escuro: #7D8F30;
+    --verde: #9bae45;
+    --verde-escuro: #7d8f30;
     --bege: #8F7868;
-    --bege-escuro: #745B49;
+    --bege-escuro: #745b49;
     --marrom: #433633;
     --cinza: #2c2c2c;
 }
@@ -145,4 +145,112 @@ header{
     text-transform: uppercase;
     text-decoration: none;
     color: var(--branco);
+}
+
+/* RODAPE */
+#rodape section{
+
+    background-color: var(--preto);
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-around;
+}
+
+#logo_rodape{
+
+    width: 300px;
+}
+
+.contato{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato h3{
+
+    color: var(--bege-escuro);
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "Mogra", system-ui;
+    margin-bottom: .7em;
+}
+
+.contato a{
+
+    cursor: pointer;
+}
+
+.contato img{
+
+    width: 35px;
+    padding: 0 .5em;
+}
+
+/* From Uiverse.io by ilkhoeri CARD CARROSEL*/ 
+.wrapper{
+
+    width: 100%;
+    height: 60%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+  
+.inner{
+
+    --w: 100px;
+    --h: 150px;
+    --translateZ: calc((var(--w) + var(--h)) + 0px);
+    --rotateX: -15deg;
+    --perspective: 1000px;
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 25%;
+    left: calc(50% - (var(--w) / 2) - 2.5px);
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform: perspective(var(--perspective));
+    animation: rotating 20s linear infinite; /* */
+  }
+  @keyframes rotating {
+    from {
+      transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+        rotateY(0);
+    }
+    to {
+      transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+        rotateY(1turn);
+    }
+}
+  
+.card_carrosel{
+
+    position: absolute;
+    border: 2px solid rgba(var(--color-card));
+    border-radius: 12px;
+    overflow: hidden;
+    inset: 0;
+    transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+      translateZ(var(--translateZ));
+}
+  
+.img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #0000
+      radial-gradient(
+        circle,
+        rgba(var(--color-card), 0.2) 0%,
+        rgba(var(--color-card), 0.6) 80%,
+        rgba(var(--color-card), 0.9) 100%
+      );
 }

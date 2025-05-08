@@ -7,12 +7,17 @@
 
 #banner img{
     
-    height: 250px;
+    display: none;
 }
 
 #cards{
  
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
+}
+
+#logo_rodape{
+
+    display: none;
 }
 }
